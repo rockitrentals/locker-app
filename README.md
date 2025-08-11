@@ -98,6 +98,13 @@ locker-app/
     └── iot/        # Raspberry Pi scripts and hardware docs
 ```
 
+## How to run monorepo (Windows)
+
+1. Install [Node.js](https://nodejs.org/) for Windows, which includes npm.
+2. In PowerShell or Command Prompt, navigate to this repository and run `npm install`.
+3. Start the web app with `npm run dev:web`.
+4. Start the API server with `npm run dev:api`.
+
 ## Notes for Future Contributors
 - This repository currently contains only planning documentation; application code will be added in future milestones.
 - For every pull request, append a timestamped summary of changes to `worklog.txt`.
