@@ -22,3 +22,10 @@
 =======
 =======
 
+
+### 2025-08-11 04:03:54 UTC
+- Scaffolded Express + TypeScript API in `apps/api` with health and auth routes.
+- Added Prisma schema with `User` model and initial migration script.
+- Created development scripts and environment example.
+- Added Docker Compose setup for Postgres and API service.
+- Documented Windows development options in README.

@@ -109,3 +109,15 @@ locker-app/
 ---
 This README serves as a blueprint for building the locker application. Expand it with setup instructions and detailed module docs as development progresses.
 
+
+## Running the API Locally on Windows
+
+### With Docker
+1. Install Docker Desktop.
+2. From `infrastructure/docker`, run `docker-compose up`.
+   - This starts a Postgres container and runs `npm run prisma:migrate && npm run dev` in the API service.
+
+### Without Docker
+1. Install Node.js and PostgreSQL locally.
+2. Copy `.env.example` to `.env` inside `apps/api` and update `DATABASE_URL` to point at your database.
+3. In `apps/api`, run `npm install` followed by `npm run prisma:migrate` and `npm run dev`.
