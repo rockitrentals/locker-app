@@ -109,3 +109,13 @@ locker-app/
 ---
 This README serves as a blueprint for building the locker application. Expand it with setup instructions and detailed module docs as development progresses.
 
+
+## Running the Web App on Windows
+
+```bash
+cd apps/web
+npm install
+npm run dev
+```
+
+The final command prints a localhost URL that you can open in your browser.
