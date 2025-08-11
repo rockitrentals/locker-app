@@ -1,4 +1,4 @@
-// File: C:\Users\grant\OneDrive\Documents\GitHub\locker-app\apps\web\app\layout.tsx
+// File: c:\Users\grant\OneDrive\Documents\GitHub\locker-app\apps\web\app\layout.tsx
 import * as entry from '../../../app/layout.js'
 import type { ResolvingMetadata, ResolvingViewport } from 'next/dist/lib/metadata/types/metadata-interface.js'
 

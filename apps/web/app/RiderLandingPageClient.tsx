@@ -3,6 +3,7 @@
 import React from "react";
 import { motion } from "framer-motion";
 import { Bike, Lock, CreditCard, Smartphone, TimerReset, ChevronRight } from "lucide-react";
+import Image from "next/image";
 
 const container = {
   hidden: { opacity: 0 },
@@ -21,8 +22,8 @@ export default function RiderLandingPageClient() {
       <header className="sticky top-0 z-40 border-b border-white/10 bg-black/70 backdrop-blur">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 h-24 flex items-center justify-between">
           <a className="flex items-center gap-3 select-none" href="#">
-            <div className="size-10 grid place-items-center rounded-md bg-white text-black">
-              <Lock className="size-5" />
+            <div className="size-20 grid place-items-center rounded-full bg-white shadow-lg border-4 border-black">
+              <Image src="/images/Rockit Logo.png" alt="Rockit Rentals Logo" width={72} height={72} className="object-contain" priority />
             </div>
             <span className="font-bold tracking-tight text-2xl sm:text-3xl">Rockit Rentals</span>
           </a>
@@ -30,6 +31,7 @@ export default function RiderLandingPageClient() {
             <a href="#how" className="hover:text-white">How it works</a>
             <a href="#pricing" className="hover:text-white">Pricing</a>
             <a href="#faq" className="hover:text-white">FAQ</a>
+            <a href="#feedback" className="hover:text-white font-semibold text-white">Feedback</a>
           </nav>
           <a
             href="#get-started"
@@ -50,7 +52,7 @@ export default function RiderLandingPageClient() {
                 Unlock adventure.
               </h1>
               <p className="mt-4 text-zinc-300 text-base sm:text-lg max-w-prose">
-                Reserve a premium fat‑tire e‑bike, walk up to the locker, tap unlock, ride. No counters, no phone calls—just roads.
+                Walk up and scan the QR code to unlock. No counters, no phone calls, just ride.
               </p>
               <div className="mt-8 flex flex-wrap items-center gap-3">
                 <a href="#get-started" className="rounded-md bg-white px-5 py-3 font-semibold text-black hover:bg-zinc-200 transition">
@@ -68,13 +70,8 @@ export default function RiderLandingPageClient() {
             </motion.div>
 
             <motion.div variants={item} className="lg:col-span-5">
-              {/* Media placeholder — your black‑and‑white photography will live here */}
-              <div className="relative rounded-2xl border border-white/10 bg-zinc-900 aspect-[4/3] grid place-items-center">
-                <div className="text-center text-zinc-400">
-                  <Bike className="mx-auto size-10 text-white/80" />
-                  <p className="mt-2 text-sm">Drop a high‑contrast photo here</p>
-                </div>
-              </div>
+              {/* Image Carousel with 4 slots */}
+              <ImageCarousel />
             </motion.div>
           </motion.div>
         </div>
@@ -117,6 +114,7 @@ export default function RiderLandingPageClient() {
         </div>
       </section>
 
+
       {/* FAQ */}
       <section id="faq" className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-20">
         <h3 className="text-2xl font-bold">FAQ</h3>
@@ -126,6 +124,17 @@ export default function RiderLandingPageClient() {
           <Faq q="What if the locker doesn’t open?" a="Contact support from the app. Staff can remotely open if needed." />
           <Faq q="Can I change my time?" a="Yes—extend or shorten from the rental screen if bikes are available." />
         </div>
+      </section>
+
+      {/* Customer Feedback - Pilot Program */}
+      <section id="feedback" className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-20">
+        <h3 className="text-2xl font-bold mb-2">Customer Feedback</h3>
+        <p className="text-zinc-300 mb-8">This is a pilot program. We value your feedback to help us improve Rockit Rentals!</p>
+        <form className="bg-zinc-950 border border-white/10 rounded-2xl p-8 max-w-xl mx-auto flex flex-col gap-4 shadow">
+          <label className="font-semibold text-white" htmlFor="feedback-message">Your feedback</label>
+          <textarea id="feedback-message" name="feedback" rows={4} required className="rounded-md border border-white/15 bg-black text-white p-3 resize-none focus:outline-none focus:ring-2 focus:ring-white/30" placeholder="Share your experience or suggestions..."></textarea>
+          <button type="submit" className="self-end mt-2 rounded-md bg-white px-6 py-2 text-black font-semibold hover:bg-zinc-200 transition">Submit</button>
+        </form>
       </section>
 
       <footer className="border-t border-white/10">
@@ -183,6 +192,35 @@ function Faq({ q, a }: { q: string; a: string }) {
     <div className="rounded-2xl border border-white/10 bg-zinc-950 p-5">
       <div className="font-semibold">{q}</div>
       <div className="mt-2 text-sm text-zinc-300">{a}</div>
+    </div>
+  );
+}
+
+// Simple image carousel for the hero section
+function ImageCarousel() {
+  const images = [
+    { src: "/images/Fat Tire Riders Stock.jpg", alt: "Fat Tire Riders" },
+    { src: "/images/Rockit Logo.png", alt: "Rockit Rentals Logo" },
+    { src: "/images/Fat Tire Riders Stock.jpg", alt: "Fat Tire Riders (2)" },
+    { src: "/images/Rockit Logo.png", alt: "Rockit Rentals Logo (2)" },
+  ];
+  const [index, setIndex] = React.useState(0);
+  return (
+    <div className="relative rounded-lg border border-white/10 bg-zinc-900 aspect-[4/3] flex flex-col items-center justify-center overflow-hidden">
+      <div className="w-full h-full relative">
+        <Image src={images[index].src} alt={images[index].alt} fill style={{objectFit: 'contain'}} priority />
+      </div>
+      <div className="absolute bottom-4 left-0 right-0 flex justify-center gap-2 z-10">
+        {images.map((_, i) => (
+          <button
+            key={i}
+            className={`w-3 h-3 rounded-full border border-white/30 ${index === i ? 'bg-white' : 'bg-zinc-700'} transition`}
+            style={{ outline: 'none' }}
+            aria-label={`Show image ${i+1}`}
+            onClick={() => setIndex(i)}
+          />
+        ))}
+      </div>
     </div>
   );
 }
