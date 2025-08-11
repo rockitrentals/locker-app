@@ -27,6 +27,10 @@
 =======
 =======
 
+### 2025-08-11 04:02:47 UTC
+- Scaffolded a Next.js 14 + TypeScript + Tailwind app in apps/web with sample Vitest test.
+- Added Windows run instructions to the root README.
+=======
 
 ### 2025-08-11 04:03:54 UTC
 - Scaffolded Express + TypeScript API in `apps/api` with health and auth routes.
@@ -34,3 +38,4 @@
 - Created development scripts and environment example.
 - Added Docker Compose setup for Postgres and API service.
 - Documented Windows development options in README.
+
