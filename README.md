@@ -98,6 +98,13 @@ locker-app/
     └── iot/        # Raspberry Pi scripts and hardware docs
 ```
 
+## How to run monorepo (Windows)
+
+1. Install [Node.js](https://nodejs.org/) for Windows, which includes npm.
+2. In PowerShell or Command Prompt, navigate to this repository and run `npm install`.
+3. Start the web app with `npm run dev:web`.
+4. Start the API server with `npm run dev:api`.
+
 ## Notes for Future Contributors
 - This repository currently contains only planning documentation; application code will be added in future milestones.
 - For every pull request, append a timestamped summary of changes to `worklog.txt`.
@@ -110,6 +117,7 @@ locker-app/
 This README serves as a blueprint for building the locker application. Expand it with setup instructions and detailed module docs as development progresses.
 
 
+
 ## Running the Web App on Windows
 
 ```bash
@@ -119,3 +127,16 @@ npm run dev
 ```
 
 The final command prints a localhost URL that you can open in your browser.
+=======
+## Running the API Locally on Windows
+
+### With Docker
+1. Install Docker Desktop.
+2. From `infrastructure/docker`, run `docker-compose up`.
+   - This starts a Postgres container and runs `npm run prisma:migrate && npm run dev` in the API service.
+
+### Without Docker
+1. Install Node.js and PostgreSQL locally.
+2. Copy `.env.example` to `.env` inside `apps/api` and update `DATABASE_URL` to point at your database.
+3. In `apps/api`, run `npm install` followed by `npm run prisma:migrate` and `npm run dev`.
+

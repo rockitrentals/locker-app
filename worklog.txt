@@ -19,9 +19,23 @@
 - Attempted to initialize Next.js app for the web frontend but installation failed due to a 403 error fetching packages.
 - Created a simple static landing page under apps/web with basic styling as a starting point.
 - Added a root .gitignore to keep node_modules and build artifacts out of version control.
+
+### 2025-08-11 04:02:02 UTC
+- Added root package.json defining npm workspaces and common scripts.
+- Created .gitignore entries for node_modules, dist, .env, and coverage.
+- Documented Windows commands in README under "How to run monorepo (Windows)".
 =======
 =======
 
 ### 2025-08-11 04:02:47 UTC
 - Scaffolded a Next.js 14 + TypeScript + Tailwind app in apps/web with sample Vitest test.
 - Added Windows run instructions to the root README.
+=======
+
+### 2025-08-11 04:03:54 UTC
+- Scaffolded Express + TypeScript API in `apps/api` with health and auth routes.
+- Added Prisma schema with `User` model and initial migration script.
+- Created development scripts and environment example.
+- Added Docker Compose setup for Postgres and API service.
+- Documented Windows development options in README.
+
