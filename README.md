@@ -100,6 +100,7 @@ locker-app/
 
 ## Notes for Future Contributors
 - This repository currently contains only planning documentation; application code will be added in future milestones.
+- For every pull request, append a timestamped summary of changes to `worklog.txt`.
 - Keep code well‑commented and prefer readability over cleverness.
 - Avoid obscure libraries; favor those with abundant documentation and active communities.
 - Document any architectural decisions in `/docs/architecture.md` as the project evolves.

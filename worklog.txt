@@ -1,7 +1,17 @@
 ## Work Log
+
+### 2025-08-11 03:22:02 UTC
+=======
+
 - Read README.md to understand the planned project architecture and directory layout.
 - Created base folder structure as specified in the README:
   - apps/ with web/, mobile/, api/ subdirectories.
   - packages/ with ui/ and lib/ subdirectories.
   - infrastructure/ with docker/ and iot/ subdirectories.
 - Added .gitkeep files to each directory to ensure they are tracked by Git.
+
+### 2025-08-11 03:22:50 UTC
+- Updated README with instructions to add a timestamped work-log entry for every pull request.
+- Added timestamps to existing work log entries.
+=======
+
