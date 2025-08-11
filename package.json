@@ -1,0 +1,14 @@
+{
+  "name": "locker-app",
+  "private": true,
+  "version": "1.0.0",
+  "workspaces": ["apps/*", "packages/*"],
+  "scripts": {
+    "build": "npm -ws run build",
+    "dev:web": "npm --workspace apps/web run dev",
+    "dev:api": "npm --workspace apps/api run dev",
+    "lint": "npm -ws run lint",
+    "typecheck": "npm -ws run typecheck",
+    "test": "npm -ws run test"
+  }
+}

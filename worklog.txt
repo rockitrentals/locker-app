@@ -19,6 +19,11 @@
 - Attempted to initialize Next.js app for the web frontend but installation failed due to a 403 error fetching packages.
 - Created a simple static landing page under apps/web with basic styling as a starting point.
 - Added a root .gitignore to keep node_modules and build artifacts out of version control.
+
+### 2025-08-11 04:02:02 UTC
+- Added root package.json defining npm workspaces and common scripts.
+- Created .gitignore entries for node_modules, dist, .env, and coverage.
+- Documented Windows commands in README under "How to run monorepo (Windows)".
 =======
 =======
 
