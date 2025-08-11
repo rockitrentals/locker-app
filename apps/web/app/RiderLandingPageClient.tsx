@@ -19,12 +19,12 @@ export default function RiderLandingPageClient() {
     <div className="min-h-screen bg-black text-white">
       {/* Top nav */}
       <header className="sticky top-0 z-40 border-b border-white/10 bg-black/70 backdrop-blur">
-        <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 h-16 flex items-center justify-between">
-          <a className="flex items-center gap-2 select-none" href="#">
-            <div className="size-8 grid place-items-center rounded-md bg-white text-black">
-              <Lock className="size-4" />
+        <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 h-24 flex items-center justify-between">
+          <a className="flex items-center gap-3 select-none" href="#">
+            <div className="size-10 grid place-items-center rounded-md bg-white text-black">
+              <Lock className="size-5" />
             </div>
-            <span className="font-semibold tracking-tight">Locker</span>
+            <span className="font-bold tracking-tight text-2xl sm:text-3xl">Rockit Rentals</span>
           </a>
           <nav className="hidden md:flex items-center gap-8 text-sm text-zinc-300">
             <a href="#how" className="hover:text-white">How it works</a>
@@ -50,7 +50,7 @@ export default function RiderLandingPageClient() {
                 Unlock adventure.
               </h1>
               <p className="mt-4 text-zinc-300 text-base sm:text-lg max-w-prose">
-                Reserve a premium fat‑tire e‑bike, walk up to the locker, tap unlock, ride. No counters, no phone calls—just trails.
+                Reserve a premium fat‑tire e‑bike, walk up to the locker, tap unlock, ride. No counters, no phone calls—just roads.
               </p>
               <div className="mt-8 flex flex-wrap items-center gap-3">
                 <a href="#get-started" className="rounded-md bg-white px-5 py-3 font-semibold text-black hover:bg-zinc-200 transition">
@@ -83,7 +83,7 @@ export default function RiderLandingPageClient() {
       {/* How it works */}
       <section id="how" className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-20">
         <h2 className="text-2xl sm:text-3xl font-bold">How it works</h2>
-        <p className="mt-2 text-zinc-300 max-w-prose">Four steps. Trail‑ready in minutes.</p>
+  <p className="mt-2 text-zinc-300 max-w-prose">Four steps. Road‑ready in minutes.</p>
         <div className="mt-8 grid gap-6 md:grid-cols-4">
           <Step icon={<Smartphone className="size-5" />} title="Reserve">Create an account and choose your time window.</Step>
           <Step icon={<CreditCard className="size-5" />} title="Pay">Checkout securely. Your card data never hits our servers.</Step>
@@ -130,7 +130,7 @@ export default function RiderLandingPageClient() {
 
       <footer className="border-t border-white/10">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-10 text-sm text-zinc-400 flex flex-col sm:flex-row items-center justify-between gap-3">
-          <p>© {new Date().getFullYear()} Locker. All rights reserved.</p>
+          <p>© {new Date().getFullYear()} Rockit Rentals. All rights reserved.</p>
           <div className="flex items-center gap-4">
             <a href="#" className="hover:text-white">Privacy</a>
             <a href="#" className="hover:text-white">Terms</a>
